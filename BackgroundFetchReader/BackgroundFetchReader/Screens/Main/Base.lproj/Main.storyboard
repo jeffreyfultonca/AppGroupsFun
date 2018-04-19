@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dnG-aO-HDb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BackgroundFetchReader-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ReaderViewController" customModule="BackgroundFetchReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hxW-Yw-Q1H">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="XlF-ld-Qr0" detailTextLabel="Hfw-xU-2kU" style="IBUITableViewCellStyleSubtitle" id="SwQ-M7-R3m">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SwQ-M7-R3m" id="SQk-LR-EyL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XlF-ld-Qr0">
+                                                    <rect key="frame" x="15" y="5" width="51.5" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hfw-xU-2kU">
+                                                    <rect key="frame" x="15" y="25" width="58" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9P-et-yaj" userLabel="BackgroundFetchResult Blur Container">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Mfm-qt-oPy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yoG-oU-qBy" userLabel="Content Container">
+                                            <rect key="frame" x="8" y="8" width="359" height="52"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="result to pass into background fetch completion handler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHq-d8-MGP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="16"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YAb-lr-wfB" userLabel="BackgroundFetchResult Segmented Control">
+                                                    <rect key="frame" x="0.0" y="24" width="359" height="29"/>
+                                                    <segments>
+                                                        <segment title="noData"/>
+                                                        <segment title="newData"/>
+                                                        <segment title="failed"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="backgroundFetchResultValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="aeh-6e-Rp5"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="leadingMargin" secondItem="yoG-oU-qBy" secondAttribute="leading" id="HH5-vk-SX9"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yoG-oU-qBy" secondAttribute="bottom" constant="12" id="IeA-Pz-l5c"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yoG-oU-qBy" secondAttribute="trailing" id="Tuq-ZH-gQd"/>
+                                        <constraint firstItem="yoG-oU-qBy" firstAttribute="top" secondItem="Mfm-qt-oPy" secondAttribute="topMargin" id="kMs-5a-x3d"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="b9P-et-yaj" secondAttribute="bottom" id="BPi-QK-Dy9"/>
+                            <constraint firstAttribute="trailing" secondItem="hxW-Yw-Q1H" secondAttribute="trailing" id="Bp8-dC-5At"/>
+                            <constraint firstItem="hxW-Yw-Q1H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cq0-SN-4SG"/>
+                            <constraint firstItem="hxW-Yw-Q1H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JtJ-8X-Mq1"/>
+                            <constraint firstItem="b9P-et-yaj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Pah-pY-qhz"/>
+                            <constraint firstAttribute="bottom" secondItem="hxW-Yw-Q1H" secondAttribute="bottom" id="RLQ-m1-bMW"/>
+                            <constraint firstAttribute="trailing" secondItem="b9P-et-yaj" secondAttribute="trailing" id="Yp7-DA-0dd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="BackgroundFetchReader" id="fO5-3J-qQP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ZHv-hY-seZ">
+                            <connections>
+                                <action selector="reloadTapped:" destination="BYZ-38-t0r" id="a1c-pT-r7f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backgroundFetchResultBlurContainer" destination="b9P-et-yaj" id="DEh-cZ-4Ic"/>
+                        <outlet property="backgroundFetchResultSegmentedControl" destination="YAb-lr-wfB" id="dkv-v2-ZOL"/>
+                        <outlet property="tableView" destination="hxW-Yw-Q1H" id="Rcw-FC-cPq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872.79999999999995" y="-564.46776611694156"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4C3-sa-iqe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dnG-aO-HDb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mpr-G8-4Nu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eFN-vT-Wab"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bM2-7k-wwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="-564.46776611694156"/>
+        </scene>
+    </scenes>
+</document>
