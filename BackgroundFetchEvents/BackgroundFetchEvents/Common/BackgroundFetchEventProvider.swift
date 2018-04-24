@@ -7,6 +7,7 @@ public protocol BackgroundFetchEventProvider {
     var backgroundFetchEvents: Set<BackgroundFetchEvent> { get }
     func recordBackgroundFetchEvent()
     var backgroundFetchResultToReturn: UIBackgroundFetchResult { get set }
+    var shouldNotifyUserOfBackgroundFetchEvents: Bool { get set }
 }
 
 // MARK: - ProductionBackgroundFetchEventProvider
@@ -20,6 +21,7 @@ public class ProductionBackgroundFetchEventProvider: BackgroundFetchEventProvide
     struct UserDefaultKeys {
         static let backgroundFetchEvents = "backgroundFetchEvents"
         static let backgroundFetchResultToReturn = "backgroundFetchResultToReturn"
+        static let shouldNotifyUserOfBackgroundFetchEvents = "shouldNotifyUserOfBackgroundFetchEvents"
     }
     private let sharedUserDefaults = UserDefaults(suiteName: "group.ca.jeffreyfulton.app-groups-fun")!
     private let notificationCenter = NotificationCenter.default
@@ -70,5 +72,12 @@ public class ProductionBackgroundFetchEventProvider: BackgroundFetchEventProvide
         set {
             sharedUserDefaults.set(newValue.rawValue, forKey: UserDefaultKeys.backgroundFetchResultToReturn)
         }
+    }
+    
+    // MARK: - User Notifications
+    
+    public var shouldNotifyUserOfBackgroundFetchEvents: Bool {
+        get { return sharedUserDefaults.bool(forKey: UserDefaultKeys.shouldNotifyUserOfBackgroundFetchEvents) }
+        set { sharedUserDefaults.set(newValue, forKey: UserDefaultKeys.shouldNotifyUserOfBackgroundFetchEvents) }
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dnG-aO-HDb">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,22 +16,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ReaderViewController" customModule="BackgroundFetchReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hxW-Yw-Q1H">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="XlF-ld-Qr0" detailTextLabel="Hfw-xU-2kU" style="IBUITableViewCellStyleSubtitle" id="SwQ-M7-R3m">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SwQ-M7-R3m" id="SQk-LR-EyL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XlF-ld-Qr0">
-                                                    <rect key="frame" x="15" y="5" width="51.5" height="20"/>
+                                                    <rect key="frame" x="15.000000000000004" y="5" width="51.333333333333336" height="20"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -50,37 +50,59 @@
                                 </prototypes>
                             </tableView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9P-et-yaj" userLabel="BackgroundFetchResult Blur Container">
-                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Mfm-qt-oPy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="667.33333333333337" width="375" height="144.66666666666663"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Mfm-qt-oPy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144.66666666666663"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yoG-oU-qBy" userLabel="Content Container">
-                                            <rect key="frame" x="8" y="8" width="359" height="52"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yoG-oU-qBy" userLabel="Content Container">
+                                            <rect key="frame" x="8" y="8" width="359" height="94.666666666666671"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="result to pass into background fetch completion handler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHq-d8-MGP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="16"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YAb-lr-wfB" userLabel="BackgroundFetchResult Segmented Control">
-                                                    <rect key="frame" x="0.0" y="24" width="359" height="29"/>
-                                                    <segments>
-                                                        <segment title="noData"/>
-                                                        <segment title="newData"/>
-                                                        <segment title="failed"/>
-                                                    </segments>
-                                                    <connections>
-                                                        <action selector="backgroundFetchResultValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="aeh-6e-Rp5"/>
-                                                    </connections>
-                                                </segmentedControl>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NaD-me-jVq" userLabel="Background Fetch Result Container">
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="51.666666666666664"/>
+                                                    <subviews>
+                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YAb-lr-wfB" userLabel="BackgroundFetchResult Segmented Control">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="29"/>
+                                                            <segments>
+                                                                <segment title="noData"/>
+                                                                <segment title="newData"/>
+                                                                <segment title="failed"/>
+                                                            </segments>
+                                                            <connections>
+                                                                <action selector="backgroundFetchResultValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="aeh-6e-Rp5"/>
+                                                            </connections>
+                                                        </segmentedControl>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result to pass into background fetch completion handler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHq-d8-MGP">
+                                                            <rect key="frame" x="0.0" y="36" width="359" height="15.666666666666664"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QVF-5D-WUH" userLabel="Backround Fetch Notifications Container">
+                                                    <rect key="frame" x="0.0" y="63.666666666666629" width="359" height="31"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" text="Background fetch notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iYQ-tj-uXu" userLabel="Background Fetch Notifications Title Label">
+                                                            <rect key="frame" x="0.0" y="0.0" width="302" height="31"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uj7-n6-rp7" userLabel="Background Fetch Notifications Switch">
+                                                            <rect key="frame" x="310" y="0.0" width="51" height="31"/>
+                                                            <connections>
+                                                                <action selector="backgroundFetchNotificationsValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ff1-MQ-yzd"/>
+                                                            </connections>
+                                                        </switch>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                         </stackView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="leadingMargin" secondItem="yoG-oU-qBy" secondAttribute="leading" id="HH5-vk-SX9"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="yoG-oU-qBy" secondAttribute="bottom" constant="12" id="IeA-Pz-l5c"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yoG-oU-qBy" secondAttribute="bottom" id="IeA-Pz-l5c"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="yoG-oU-qBy" secondAttribute="trailing" id="Tuq-ZH-gQd"/>
                                         <constraint firstItem="yoG-oU-qBy" firstAttribute="top" secondItem="Mfm-qt-oPy" secondAttribute="topMargin" id="kMs-5a-x3d"/>
                                     </constraints>
@@ -108,6 +130,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backgroundFetchNotificationsSwitch" destination="Uj7-n6-rp7" id="aAQ-cy-K5y"/>
                         <outlet property="backgroundFetchResultBlurContainer" destination="b9P-et-yaj" id="DEh-cZ-4Ic"/>
                         <outlet property="backgroundFetchResultSegmentedControl" destination="YAb-lr-wfB" id="dkv-v2-ZOL"/>
                         <outlet property="tableView" destination="hxW-Yw-Q1H" id="Rcw-FC-cPq"/>
@@ -123,7 +146,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dnG-aO-HDb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mpr-G8-4Nu">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

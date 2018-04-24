@@ -8,6 +8,7 @@ class ReaderViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var backgroundFetchResultBlurContainer: UIVisualEffectView!
     @IBOutlet var backgroundFetchResultSegmentedControl: UISegmentedControl!
+    @IBOutlet var backgroundFetchNotificationsSwitch: UISwitch!
     
     // MARK: - Stored Properties
     
@@ -25,6 +26,7 @@ class ReaderViewController: UIViewController {
         registerForNotifications()
         fetchBackgroundFetchEvents(reloadTable: false)
         updateBackgroundFetchResultSegementedControl()
+        updateBackgroundFetchNotificationsSwitch()
     }
     
     override func viewDidLayoutSubviews() {
@@ -81,6 +83,10 @@ class ReaderViewController: UIViewController {
         backgroundFetchResultSegmentedControl.selectedSegmentIndex = selectedSegmentIndex
     }
     
+    private func updateBackgroundFetchNotificationsSwitch() {
+        backgroundFetchNotificationsSwitch.isOn = backgroundFetchEventProvider.shouldNotifyUserOfBackgroundFetchEvents
+    }
+    
     // MARK: - Actions
     
     @IBAction func reloadTapped(_ sender: Any) {
@@ -99,6 +105,10 @@ class ReaderViewController: UIViewController {
         }
         
         backgroundFetchEventProvider.backgroundFetchResultToReturn = backgroundFetchResult
+    }
+    
+    @IBAction func backgroundFetchNotificationsValueChanged(_ sender: Any) {
+        backgroundFetchEventProvider.shouldNotifyUserOfBackgroundFetchEvents = backgroundFetchNotificationsSwitch.isOn
     }
 }
 

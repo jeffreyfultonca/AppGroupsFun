@@ -36,7 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
     {
         backgroundFetchEventProvider.recordBackgroundFetchEvent()
-        notificationProvider.postDidPerformFetchNotification()
+        
+        if backgroundFetchEventProvider.shouldNotifyUserOfBackgroundFetchEvents {
+            notificationProvider.postDidPerformFetchNotification()
+        }
+        
         completionHandler(backgroundFetchEventProvider.backgroundFetchResultToReturn)
     }
 }
