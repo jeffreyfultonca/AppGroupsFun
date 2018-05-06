@@ -4,7 +4,7 @@
 The purpose of this project is for me to gain experience with:
 1. Sharing data between mulitple apps via App Groups.
 2. Determining the approximate frequency of Background Fetch events in both iOS 10 and iOS 11.
-3. Extracting common code into a framework and access from multiple app projects withing an Xcode Workspace.
+3. Extracting common code into a framework to access from multiple app projects within an Xcode Workspace.
 
 ## Project Setup
 
